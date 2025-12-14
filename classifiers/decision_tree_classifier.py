@@ -10,22 +10,22 @@ from sklearn.metrics import roc_curve, roc_auc_score, RocCurveDisplay
 
 
 #Reading the file with train data and adding a label column
-df = pd.read_csv('42_train.csv', header=None)
+df = pd.read_csv('trainData/42_train.csv', header=None)
 df['label'] = 0
 df.loc[2000:, 'label'] = 1
 
 #Reading the file with test data
-test_data = pd.read_csv('42_test.csv', header=None)
+test_data = pd.read_csv('trainData/42_test.csv', header=None)
 
-print(df.head())
-print(df.tail())
+#print(df.head())
+#print(df.tail())
 
 #Splitting dataset in features and target variable
 X = df.iloc[:, :-1]
 y = df.iloc[:, -1]
 
-print(X.shape)
-print(y.shape)
+#print(X.shape)
+#print(y.shape)
 
 #Cross-validated AUC estimate
 base_clf = DecisionTreeClassifier(max_depth=5, min_samples_leaf=10, random_state=0)
@@ -94,5 +94,5 @@ X_test = test_data
 test_scores = clf.predict_proba(X_test)[:, 1]
 
 #Submition file
-pd.DataFrame(test_scores).to_csv("42_submission.csv", index=False, header=False)
+pd.DataFrame(test_scores).to_csv("42_submission_dec_tree.csv", index=False, header=False)
 print("Submission shape should be (50000,):", test_scores.shape)
