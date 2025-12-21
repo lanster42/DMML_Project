@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 from sklearn.pipeline import Pipeline
+from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split, StratifiedKFold, cross_val_score
@@ -26,7 +27,8 @@ y = df.iloc[:, -1]
 
 #build pipeline: scaler -> logistic regression (for data scaling)
 pipe = Pipeline([       #the fact that scaling the data didn't change the result means that data is likely already scaled well
-    ('scaler', StandardScaler()),
+    #('pca', PCA(n_components=0.92)),  # Retain 95% of variance --this has also no success which means that the data most likely doesn't correlate / depend on one another
+    ('scaler', StandardScaler()),   #scaling so that features contribute equally
     ('logreg', LogisticRegression(random_state=0, max_iter=2000))
 ])
 
