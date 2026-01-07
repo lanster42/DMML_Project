@@ -81,7 +81,10 @@ INPUT C:\Users\lanst\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tf
 OUTPUT Report_project.pdf
 INPUT C:\Users\lanst\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\lanst\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt12.tfm
+INPUT C:\Users\lanst\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT Report_project.aux
+INPUT C:\Users\lanst\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
+INPUT C:\Users\lanst\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\lanst\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\lanst\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\lanst\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
