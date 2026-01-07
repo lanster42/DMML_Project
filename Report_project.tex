@@ -28,7 +28,7 @@ Logistic regression served us as a linear baseline. It achieved a mean cross-val
 
 Decision trees achieved a mean AUC of roughly 0.891. However, performance varied across folds, and trees showed sensitivity to training splits, which suggests that they aren't robust. While decision trees are easy to interpret, they couldn't compare to ensemble methods.
 
-Random forests delivered a substantial performance improvement, achieving a mean AUC of approximately 0.967 with low variance. The ensemble approach reduced overfitting and more effectively captured complex feature interactions. Training AUC reached 1.0, which raised mild concerns regarding overfitting. To confirm that the performance was not due to chance, we used permutation testing.
+Random forests delivered a substantial performance improvement, achieving a mean AUC of approximately 0.967 with low variance. The ensemble approach reduced overfitting and more effectively captured complex feature interactions. Training AUC reached 1.0, which raised mild concerns regarding overfitting. To confirm that the performance was not due to chance, we used permutation testing, which resulted in mean AUC being roughly 0.495.
 
 Neural networks also performed strongly, reaching a mean AUC of around 0.958. Despite this strong performance, they required more careful tuning and were less transparent in terms of decision-making, which complicated validation and interpretation. They were also more computationally expensive.
 
@@ -74,6 +74,7 @@ In conclusion, based on cross-validation, hold-out validation, and permutation t
 
 \section{Other Matters (250 words max)}
 % Mentions any important issue that needs mentioning.
+Although the data were reported to consist of 72 numerical attributes, the dataset used in our analysis contained only 64. We attribute this discrepancy to preprocessing steps applied prior to data release. The omitted eight attributes likely did not contribute meaningful information for predicting the target label and were therefore removed.
 Since both random forests and neural networks showed promising results, we could use them instead of SVM in some cases. In particular, if complexity became a problem, we would prefer the random forest classifier, since the python file containing random forest code executed in approximately 14 seconds.
 
 \end{document}
